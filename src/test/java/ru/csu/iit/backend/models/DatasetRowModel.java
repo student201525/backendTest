@@ -41,7 +41,8 @@ public class DatasetRowModel {
         return "DatasetRowModel{" +
                 " global_id=" + id +
                 ", Number='" + number + '\'' +
-                ", Cells={ 'CommonName' = '" + cells.getCommonName()
+                ", Cells={ 'CommonName' = '" + cells.getName()
+                + "' , 'Location' ='" + cells.getLocation()
                 + "'\n}}";
     }
 }

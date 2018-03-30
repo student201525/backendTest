@@ -4,16 +4,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DatasetCell
 {
-
-    public String getCommonName() {
-        return commonName;
+    public String getLocation() {
+        return location;
     }
 
-    public void setCommonName(String commonName) {
-        this.commonName = commonName;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    @JsonProperty(value = "CommonName")
-    private String commonName;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @JsonProperty(value = "Location")
+    private String location;
+
+
+
+    @JsonProperty(value = "Name")
+    private String name;
 
 }

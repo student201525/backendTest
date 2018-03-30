@@ -25,8 +25,7 @@ public class DatasetRowsCountTest extends  BaseTest{
     @Test(groups = "test")
     public void getDatasetRowsCountQuery()
     {
-        getDatasetId("CategoryId eq 282 and Caption eq 'Органы записи актов " +
-            "гражданского состояния (структурные подразделения Управления ЗАГС Москвы)'");
+        getDatasetId("CategoryId eq 14 and Caption eq 'Мосты'");
         getDatasetRowsCount(datasetId);
     }
 
