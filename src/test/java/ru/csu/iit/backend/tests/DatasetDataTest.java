@@ -19,9 +19,10 @@ public class DatasetDataTest extends BaseTest{
     @Test(groups = "test")
     public void getDatasetDataQuery()
     {
-        getDatasetId("CategoryId eq 14 and Caption eq 'Мосты'");
-        getDatasetData(3, datasetId,"Name", "Location");
+        getDatasetId("CategoryId eq 15 and Caption eq 'Поля для гольфа'");
+        getDatasetData(3, datasetId,"HelpPhone_en", "Email_en","WebSite_en");
     }
+
 
 
 
@@ -32,13 +33,16 @@ public class DatasetDataTest extends BaseTest{
                 .getFields(fields)
                 .build();
 
+
+
         DatasetRowModel[] datasets = datasetsService.executeWithId(requestSpecification, id);
 
         int index=1;
         for (DatasetRowModel dataset:datasets
              ) {
-            assertThat(dataset.getCells().getName(), notNullValue());
-            assertThat(dataset.getCells().getLocation(), notNullValue());
+            assertThat(dataset.getCells().getEmail_en(), notNullValue());
+            assertThat(dataset.getCells().getHelpPhone_en(), notNullValue());
+            assertThat(dataset.getCells().getWebSite_en(), notNullValue());
             assertThat(dataset.getId(), notNullValue());
             Assert.assertEquals(dataset.getNumber(), index++);
         }

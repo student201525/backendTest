@@ -41,8 +41,9 @@ public class DatasetRowModel {
         return "DatasetRowModel{" +
                 " global_id=" + id +
                 ", Number='" + number + '\'' +
-                ", Cells={ 'CommonName' = '" + cells.getName()
-                + "' , 'Location' ='" + cells.getLocation()
+                ", Cells={ 'GetEmail_en' = '" + cells.getEmail_en()
+                + "' , 'GetWebSite_en' ='" + cells.getWebSite_en()
+                + "' , 'GetHelpPhone_en' ='" + cells.getHelpPhone_en()
                 + "'\n}}";
     }
 }

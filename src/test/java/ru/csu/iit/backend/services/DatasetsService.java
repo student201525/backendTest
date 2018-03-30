@@ -38,9 +38,9 @@ public class DatasetsService extends BaseService {
         return requestSpecification.get(request);
     }
 
-    public Response executeRowsWithId(RequestSpecification requestSpecification , int datasetId) {
-        String request= "datasets/" + datasetId + "/";
-        return requestSpecification.get(request);
+        public Response executeRowsWithId(RequestSpecification requestSpecification , int datasetId) {
+            String request= "datasets/" + datasetId + "/";
+            return requestSpecification.get(request);
     }
 
 

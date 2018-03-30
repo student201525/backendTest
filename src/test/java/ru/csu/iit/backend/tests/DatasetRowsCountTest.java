@@ -25,7 +25,7 @@ public class DatasetRowsCountTest extends  BaseTest{
     @Test(groups = "test")
     public void getDatasetRowsCountQuery()
     {
-        getDatasetId("CategoryId eq 14 and Caption eq 'Мосты'");
+        getDatasetId("CategoryId eq 15 and Caption eq 'Поля для гольфа'");
         getDatasetRowsCount(datasetId);
     }
 
@@ -37,7 +37,7 @@ public class DatasetRowsCountTest extends  BaseTest{
         Response rows = datasetsService.executeRowsWithId(requestSpecification, id);
 
         JsonParser parser = new JsonParser();
-        JsonObject object = parser.parse(rows.body().print()).getAsJsonObject();
+        JsonObject object = parser.parse(rows.body().print().toString()).getAsJsonObject();
         JsonElement element = object.get("ItemsCount");
 
         Assert.assertEquals(parseInt(count.body().print()), parseInt(element.toString()));
