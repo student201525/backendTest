@@ -56,8 +56,10 @@ public class DatasetRowsCountTest extends  BaseTest{
         DatasetModel[] datasets = datasetsService.execute(requestSpecification);
 
         Assert.assertEquals(datasets.length, 1);
-
+        
         datasetId=datasets[0].getId();
+        
+        Assert.assertEquals(datasetId, 883);
 
     }
 }
