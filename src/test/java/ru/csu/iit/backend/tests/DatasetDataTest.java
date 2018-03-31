@@ -66,5 +66,6 @@ public class DatasetDataTest extends BaseTest{
 
         datasetId=datasets[0].getId();
 
+        Assert.assertEquals(datasetId, 883);
     }
 }
